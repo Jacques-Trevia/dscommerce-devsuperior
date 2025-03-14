@@ -42,6 +42,7 @@ public class ProductController {
 		Page<ProductMinDTO> dto = service.findAll(name, pageable);
 		return ResponseEntity.ok(dto);
 	}
+	
 	@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
 	@PostMapping
 	public  ResponseEntity<ProductDTO> insert(@Valid @RequestBody ProductDTO dto) {

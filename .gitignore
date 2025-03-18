@@ -12,6 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.metadata/
 
 ### IntelliJ IDEA ###
 .idea
@@ -31,3 +32,29 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Arquivos de build ###
+build/
+target/
+.gradle/
+.mvn/
+!mvn/wrapper/maven-wrapper.jar
+
+### Arquivos temporários e logs ###
+*.log
+*.tmp
+*.bak
+*.swp
+
+### Arquivos de sistemas operacionais ###
+.DS_Store
+Thumbs.db
+
+### Package Files ###
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar

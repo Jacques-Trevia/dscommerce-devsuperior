@@ -46,6 +46,45 @@ O projeto segue a arquitetura de camadas, com:
 
 ---
 
+## 🧪 Testes com Postman
+
+Para facilitar os testes da API, disponibilizo uma coleção completa com todos os endpoints e um environment pré-configurado.
+
+### 📁 Arquivos
+
+| Arquivo | Descrição |
+|---------|-----------|
+| [DS-Commerce-Collection.json](./postman/DS-Commerce-Collection.json) | Coleção com todas as requisições (produtos, categorias, pedidos, usuários, autenticação) |
+| [DS-Commerce-Environment.json](./postman/DS-Commerce-Environment.json) | Environment com variáveis (`base_url`, `token`, `client_id`, etc.) |
+
+### 🚀 Como importar
+
+1. Faça o download dos dois arquivos acima
+2. Abra o **Postman**
+3. Clique em **Import** (botão no canto superior esquerdo)
+4. Arraste os arquivos para a janela ou selecione-os manualmente
+5. No canto superior direito, selecione o environment **"DS-Commerce"**
+6. A variável `{{base_url}}` já está configurada como `http://localhost:8080`. Altere se necessário.
+
+### 🔐 Fluxo de autenticação
+
+1. Execute a requisição **"Obter token"** na pasta `auth`
+2. Use as credenciais padrão:
+   - **Admin:** `admin@admin.com` / `123456`
+   - **Operator:** `operator@operator.com` / `123456`
+3. Após obter o token, as demais requisições protegidas já utilizam `{{token}}` automaticamente
+
+### ⚙️ Variáveis do Environment
+
+| Variável | Valor padrão | Descrição |
+|----------|--------------|-----------|
+| `base_url` | `http://localhost:8080` | URL base da API |
+| `client_id` | `myclientid` | Client ID do OAuth2 |
+| `client_secret` | `myclientsecret` | Client Secret do OAuth2 |
+| `token` | *(preenchido automaticamente)* | Token JWT obtido no login |
+
+---
+
 ## 📦 Como Rodar o Projeto
 
 ### 🔧 Configuração Inicial
@@ -93,6 +132,9 @@ Este projeto é parte do curso da **DevSuperior** e tem propósito educacional.
 
 ---
 
-# Autor
+## 👨‍💻 Autor
 
-Jacques Araujo Trevia Filho
+**Jacques Araujo Trevia Filho**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jacques-trevia)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jacques-Trevia)
